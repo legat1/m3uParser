@@ -6,18 +6,15 @@ class M3uParser(object):
         self.lines = m3u.splitlines()
 
     def parse(self):
-        parsed_lines = []
         for num, line in enumerate(self.lines):
-            if line == '#EXTM3U':
-                parsed_lines.append(line)
-            elif line.startswith('#EXTINF:'):
+            if line.startswith('#EXTINF:'):
                 group = M3uParser.extract_group(self.lines[num + 1])
-                if group != 'live' or M3uParser.is_fr(line):
-                    new_line = line.replace(',', f' group-title="{group}",', 1).replace('FR - ', '', 1).replace('FR- ',
+                if M3uParser.is_fr(line):
+                    self.lines[num] = line.replace(',', f' group-title="{group} FR",', 1).replace('FR - ', '', 1).replace('FR- ',
                                                                                                                 '', 1)
-                    parsed_lines.append(new_line)
-                    parsed_lines.append(self.lines[num + 1])
-        return '\n'.join(parsed_lines)
+                else:
+                    self.lines[num] = line.replace(',', f' group-title="{group}",', 1)
+        return '\n'.join(self.lines)
 
     @staticmethod
     def extract_group(url):

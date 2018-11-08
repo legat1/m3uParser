@@ -116,6 +116,7 @@ class Epg(object):
         self.epg['FR - PARAMOUNT CHANNEL FHD'] = {'channel_id': 'Paramount Channel'}
         self.epg['FR - RFM TV FHD'] = {'channel_id': 'RFM TV'}
         self.epg['FR - TRACE URBAN FHD'] = {'channel_id': 'Trace Urban'}
+        self.epg['FR - ELLE GIRL FHD'] = {'channel_id': 'Elle Girl'}
         self.epg['FR - TEVA HD'] = {'channel_id': 'Téva'}
         self.epg['FR - PARIS PREMIERE HD'] = {'channel_id': 'Paris Première'}
         self.epg['FR - TV 5 MONDE HD'] = {'channel_id': 'TV5 MONDE'}

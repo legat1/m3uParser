@@ -11,7 +11,10 @@ class M3uParser(object):
             if line.startswith('#EXTINF:'):
                 group = M3uParser.extract_group(self.lines[num + 1])
                 if self.is_fr(line):
-                    self.lines[num] = self.add_epg(line.replace(',', f' group-title="{group} FR",', 1))
+                    if self.has_epg(line):
+                        self.lines[num] = self.add_epg(line.replace(',', f' group-title="{group} FR",', 1))
+                    else:
+                        self.lines[num] = line.replace(',', f' group-title="{group} FR without EPG",', 1)
                 else:
                     self.lines[num] = line.replace(',', f' group-title="{group}",', 1)
         return '\n'.join(self.lines)
@@ -21,8 +24,11 @@ class M3uParser(object):
         return urlparse(url).path.split('/')[1]
 
     def is_fr(self, line):
+        return line.startswith('#EXTINF:-1,FR')
+
+    def has_epg(self, line):
         channel = line.split(',')[1]
-        return line.startswith('#EXTINF:-1,FR') and channel in self.epg.channels()
+        return channel in self.epg.channels()
 
     def add_epg(self, line):
         ext_inf = line.split(',')

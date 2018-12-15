@@ -1,6 +1,7 @@
 from urllib.parse import urlparse
 from .Epg import Epg
 
+
 class M3uParser(object):
     def __init__(self, m3u):
         self.lines = m3u.splitlines()
@@ -24,7 +25,7 @@ class M3uParser(object):
         return urlparse(url).path.split('/')[1]
 
     def is_fr(self, line):
-        return line.startswith('#EXTINF:-1,FR')
+        return line.startswith('#EXTINF:-1,FR') or line.startswith('#EXTINF:-1,|FR|')
 
     def has_epg(self, line):
         channel = line.split(',')[1]

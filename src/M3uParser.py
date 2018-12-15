@@ -35,6 +35,8 @@ class M3uParser(object):
         ext_inf = line.split(',')
         tvg = self.epg.find(ext_inf[1])
         tvg_id = tvg['channel_id']
-        ext_inf[0] += f' tvg-id="{tvg_id}"'
-        ext_inf[1] = tvg_id
+        tvg_logo = tvg['channel_logo']
+        tvg_name = tvg['channel_name']
+        ext_inf[0] += f' tvg-id="{tvg_id}" tvg-logo="{tvg_logo}"'
+        ext_inf[1] = tvg_name
         return ','.join(ext_inf)

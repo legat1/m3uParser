@@ -1,8 +1,11 @@
 from urllib.parse import urlparse
+
 from .Epg import Epg
 
 
 class M3uParser(object):
+    _LIVE = 'live'
+
     def __init__(self, m3u):
         self.lines = m3u.splitlines()
         self.epg = Epg()
@@ -12,10 +15,12 @@ class M3uParser(object):
             if line.startswith('#EXTINF:'):
                 group = M3uParser.extract_group(self.lines[num + 1])
                 if self.is_fr(line):
-                    if self.has_epg(line):
+                    if group == M3uParser._LIVE and self.has_epg(line):
                         self.lines[num] = self.add_epg(line.replace(',', f' group-title="{group} FR",', 1))
-                    else:
+                    elif group == M3uParser._LIVE:
                         self.lines[num] = line.replace(',', f' group-title="{group} FR without EPG",', 1)
+                    else:
+                        self.lines[num] = line.replace(',', f' group-title="{group} FR",', 1)
                 else:
                     self.lines[num] = line.replace(',', f' group-title="{group}",', 1)
         return '\n'.join(self.lines)
@@ -26,7 +31,7 @@ class M3uParser(object):
         if len(parts) == 5:
             return parts[1]
         elif len(parts) == 4:
-            return 'live'
+            return M3uParser._LIVE
         else:
             return 'empty'
 

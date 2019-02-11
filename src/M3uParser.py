@@ -22,7 +22,13 @@ class M3uParser(object):
 
     @staticmethod
     def extract_group(url):
-        return urlparse(url).path.split('/')[1]
+        parts = urlparse(url).path.split('/')
+        if len(parts) == 5:
+            return parts[1]
+        elif len(parts) == 4:
+            return 'live'
+        else:
+            return 'empty'
 
     def is_fr(self, line):
         return line.startswith('#EXTINF:-1,FR') or line.startswith('#EXTINF:-1,|FR|')

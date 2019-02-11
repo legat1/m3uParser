@@ -56,7 +56,7 @@ class Epg(object):
         self.epg['FR - CHERIE 25 FHD'] = {'channel_name': 'Chérie 25', 'channel_id': 'Cherie25.fr', 'channel_logo': 'http://i.imgur.com/XBbSuHv.png'}
         self.epg['FR - CSTAR FHD'] = {'channel_name': 'CStar', 'channel_id': 'CStar.fr', 'channel_logo': 'http://i.imgur.com/sSNnVvX.png'}
         self.epg['FR - RTL9 FHD'] = {'channel_name': 'RTL9', 'channel_id': 'RTL9.fr', 'channel_logo': 'http://i.imgur.com/R83Gja0.png'}
-        self.epg['FR - NUMERO 23 FHD'] = {'channel_name': 'Numéro 23', 'channel_id': 'Numero23.fr', 'channel_logo': 'http://i.imgur.com/yPbXCXK.jpg'}
+        self.epg['FR - RMC STORY FHD'] = {'channel_name': 'Numéro 23', 'channel_id': 'Numero23.fr', 'channel_logo': 'http://i.imgur.com/yPbXCXK.jpg'}
         self.epg['FR - W9 FHD'] = {'channel_name': 'W9', 'channel_id': 'W9.fr', 'channel_logo': 'http://i.imgur.com/EqNY1J7.png'}
         self.epg['FR - AB3 FHD'] = {'channel_name': 'AB3', 'channel_id': 'AB3', 'channel_logo': 'http://i.imgur.com/zYlOI2F.png'}
         self.epg['FR - CANAL8 FHD'] = {'channel_name': 'C8', 'channel_id': 'C8.fr', 'channel_logo': 'http://i.imgur.com/J30PQOP.png'}
@@ -140,6 +140,7 @@ class Epg(object):
         self.epg['FR - KTO HD'] = {'channel_name': 'KTO', 'channel_id': 'KTO', 'channel_logo': 'http://i.imgur.com/NWCwsvst.jpg'}
         self.epg['FR - SERIE CLUB HD'] = {'channel_name': 'Série Club', 'channel_id': 'SerieClub.fr', 'channel_logo': 'http://i.imgur.com/Pz1WPCZ.jpg'}
         self.epg['FR - TOONAMI HD'] = {'channel_name': 'Toonami', 'channel_id': 'Toonami', 'channel_logo': 'http://i.imgur.com/Dou5iMu.png'}
+        self.epg['FR - DISCOVERY FAMILY HD'] = {'channel_name': 'Discovery Family', 'channel_id': 'DiscoveryFamily', 'channel_logo': 'http://i.imgur.com/1NrMq2j.png'}
         self.epg['FR - DISCOVERY INVESTIGATION HD'] = {'channel_name': 'Discovery Investigation', 'channel_id': 'DiscoveryInvestigationF', 'channel_logo': 'http://i.imgur.com/2IhOal9.png'}
         self.epg['|FR| VICELAND HD'] = {'channel_name': 'Viceland', 'channel_id': 'Viceland', 'channel_logo': 'http://i.imgur.com/5zfidHC.jpg'}
         self.epg['FR - EURONEWS HD'] = {'channel_name': 'Euronews', 'channel_id': 'EuronewsF', 'channel_logo': 'http://i.imgur.com/gp1J2Qn.png'}

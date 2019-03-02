@@ -30,6 +30,7 @@ class Epg(object):
         self.epg['FR - CINE  CLASSIC FHD'] = {'channel_name': 'Ciné+ Classic', 'channel_id': 'CinecinemaClassic.fr', 'channel_logo': 'http://i.imgur.com/ZCoVZ1K.png'}
         self.epg['FR - CINE FX FHD'] = {'channel_name': 'Ciné FX', 'channel_id': 'CineFX', 'channel_logo': 'http://i.imgur.com/uViZQ9J.png'}
         self.epg['FR - PARAMOUNT CHANNEL FHD'] = {'channel_name': 'Paramount Channel', 'channel_id': 'ParamountChannel.fr', 'channel_logo': 'http://i.imgur.com/okyHY86.png'}
+        self.epg['FR - CANAL  SERIES FHD'] = {'channel_name': 'Canal + Séries', 'channel_id': 'CanalplusSeries.fr', 'channel_logo': 'http://i.imgur.com/AQGe8AX.png'}
         self.epg['FR - CANAL  SPORT FHD'] = {'channel_name': 'Canal + Sport', 'channel_id': 'CANALplusSPORT.fr', 'channel_logo': 'http://i.imgur.com/KucgW8D.png'}
         self.epg['FR - BEINSPORT1 FHD'] = {'channel_name': 'beIN Sports 1', 'channel_id': 'beINSPORTS1', 'channel_logo': 'http://i.imgur.com/W3OfHnq.png'}
         self.epg['FR - BEINSPORT2 FHD'] = {'channel_name': 'beIN Sports 2', 'channel_id': 'beINSPORTS2', 'channel_logo': 'http://i.imgur.com/D7UzWf4.png'}
@@ -48,7 +49,6 @@ class Epg(object):
         self.epg['FR - SFR SPORT5 FHD'] = {'channel_name': 'SFR Sport 5', 'channel_id': 'SFRSport5.fr', 'channel_logo': 'https://upload.wikimedia.org/wikipedia/fr/thumb/1/19/Logo_SFR_Sport_5_2016.svg/320px-Logo_SFR_Sport_5_2016.svg.png'}
         self.epg['FR - GOLF  FHD'] = {'channel_name': 'Golf+', 'channel_id': 'Golfplus', 'channel_logo': 'http://i.imgur.com/SKnHBDP.png'}
         self.epg['FR - GOLF CHANNEL FHD'] = {'channel_name': 'Golf Channel', 'channel_id': 'GolfChannel', 'channel_logo': 'http://i.imgur.com/QWmVLLD.png'}
-        self.epg['FR - CANAL  SERIES FHD'] = {'channel_name': 'Canal + Séries', 'channel_id': 'CanalplusSeries.fr', 'channel_logo': 'http://i.imgur.com/AQGe8AX.png'}
         self.epg['FR - 13EME RUE FHD'] = {'channel_name': '13ème Rue', 'channel_id': '13eRue', 'channel_logo': 'http://i.imgur.com/1GdYZEh.png'}
         self.epg['FR - COMEDIE  FHD'] = {'channel_name': 'Comédie +', 'channel_id': 'Comedie.fr', 'channel_logo': 'http://i.imgur.com/R5dKwxW.png'}
         self.epg['FR - E! ENTERTAINMENT FHD'] = {'channel_name': 'Entertainment Television', 'channel_id': 'E!F', 'channel_logo': 'http://i.imgur.com/jUMdWkW.png'}
@@ -115,15 +115,14 @@ class Epg(object):
 
         self.epg['FR - PARIS PREMIERE HD'] = {'channel_name': 'Paris Première', 'channel_id': 'ParisPremiere.fr', 'channel_logo': 'http://i.imgur.com/aNCGIoP.jpg'}
         self.epg['FR - CANAL SAVOIR HD'] = {'channel_name': 'Canal Savoir', 'channel_id': 'CanalSavoir', 'channel_logo': 'http://i.imgur.com/vRXllgy.png'}
-        self.epg['FR - RMC SPORT NEWS'] = {'channel_name': 'RMC Sport News', 'channel_id': 'RMC Sport News', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
-        self.epg['FR - RMC SPORT 1 HD'] = {'channel_name': 'RMC Sport 1', 'channel_id': 'SFRSport1.fr', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
-        self.epg['FR - RMC SPORT 2 HD'] = {'channel_name': 'RMC Sport 2', 'channel_id': 'SFRSport2.fr', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
-        self.epg['FR - RMC SPORT 3 HD'] = {'channel_name': 'RMC Sport 3', 'channel_id': 'SFRSport3.fr', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
-        self.epg['FR - RMC SPORT 4 HD'] = {'channel_name': 'RMC Sport 5', 'channel_id': 'SFRSport5.fr', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
-        self.epg['FR - RMC ACCESS SPORT 1 HD'] = {'channel_name': 'RMC Sport Access 1', 'channel_id': 'RMCSportAccess1', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
-        self.epg['FR - RMC ACCESS SPORT 2 HD'] = {'channel_name': 'RMC Sport Access 2', 'channel_id': 'RMCSportAccess2', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
-        self.epg['FR - RMC ACCESS SPORT 3 HD'] = {'channel_name': 'RMC Sport Access 3', 'channel_id': 'RMCSportAccess3', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
-        self.epg['FR - RMC ACCESS SPORT 4 HD'] = {'channel_name': 'RMC Sport Access 5', 'channel_id': 'RMCSportAccess5', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
+        self.epg['FR - R SPORT NEWS'] = {'channel_name': 'RMC Sport News', 'channel_id': 'RMC Sport News', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
+        self.epg['FR - R SPORT 1 HD'] = {'channel_name': 'RMC Sport 1', 'channel_id': 'SFRSport1.fr', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
+        self.epg['FR - R SPORT 2 HD'] = {'channel_name': 'RMC Sport 2', 'channel_id': 'SFRSport2.fr', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
+        self.epg['FR - R SPORT 3 HD'] = {'channel_name': 'RMC Sport 3', 'channel_id': 'SFRSport3.fr', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
+        self.epg['FR - R SPORT 4 HD'] = {'channel_name': 'RMC Sport 4', 'channel_id': 'SFRSport5.fr', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
+        self.epg['FR - R SPORT 5 HD'] = {'channel_name': 'RMC Sport 5', 'channel_id': 'RMCSportLive5', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
+        self.epg['FR - R SPORT 6 HD'] = {'channel_name': 'RMC Sport 6', 'channel_id': 'RMCSportLive6', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
+        self.epg['FR - R SPORT 7 HD'] = {'channel_name': 'RMC Sport 7', 'channel_id': 'RMCSportLive7', 'channel_logo': 'http://i.imgur.com/599r2Dv.png'}
         self.epg['FR - BEIN SPORT MAX 4 HD'] = {'channel_name': 'beIN Sports MAX 4', 'channel_id': 'beINSPORTS4', 'channel_logo': 'http://i.imgur.com/AlhNrHz.png'}
         self.epg['FR - BEIN SPORT MAX 5 HD .'] = {'channel_name': 'beIN Sports MAX 5', 'channel_id': 'beINSPORTS5', 'channel_logo': 'http://i.imgur.com/Kw5abIn.png'}
         self.epg['FR - BEIN SPORT MAX 6 HD'] = {'channel_name': 'beIN Sports MAX 6', 'channel_id': 'beINSPORTS6', 'channel_logo': 'http://i.imgur.com/kH0559B.png'}

@@ -1,7 +1,7 @@
 def main(request):
-    from flask import send_file, abort
     import requests
     from urllib.parse import urlparse
+    from flask import abort
 
     class M3uDownload(object):
         def __init__(self, user_id, user_pwd):

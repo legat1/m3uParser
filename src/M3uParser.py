@@ -14,15 +14,14 @@ class M3uParser(object):
         for num, line in enumerate(self.lines):
             if line.startswith('#EXTINF:'):
                 group = M3uParser.extract_group(self.lines[num + 1])
-                if self.is_fr(line):
-                    if group == M3uParser._LIVE and self.has_epg(line):
-                        self.lines[num] = self.add_epg(line.replace(',', f' group-title="{group} FR",', 1))
-                    elif group == M3uParser._LIVE:
-                        self.lines[num] = line.replace(',', f' group-title="{group} FR without EPG",', 1)
-                    else:
-                        self.lines[num] = line.replace(',', f' group-title="{group} FR",', 1)
+                if group == M3uParser._LIVE and self.has_epg(line):
+                    self.lines[num] = self.add_epg(line.replace(',', f' group-title="{M3uParser._LIVE} FR",', 1))
+                elif group == M3uParser._LIVE:
+                    self.lines[num] = line.replace(',', f' group-title="{M3uParser._LIVE}",', 1)
+                elif self.is_fr(line):
+                    self.lines[num] = line.replace(',', f' group-title="{group} FR",', 1)
                 else:
-                    self.lines[num] = line.replace(',', f' group-title="{group}",', 1)
+                    self.lines[num] = line.replace(',', f' group-title="{group}",', 1)   
         return '\n'.join(self.lines)
 
     @staticmethod
